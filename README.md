@@ -5,3 +5,5 @@ This repository consists of different programs which are solutions to different 
 Folder 1: Linked List
 
 Code 1: Add to numbers represented as linked lists
+
+Code 2: Remove all the duplicate elements in the given linked list
