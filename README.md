@@ -11,3 +11,5 @@ Code 2: Remove all the duplicate elements in the given linked list
 Code 3: Detect the starting point of a cycle, if it exists, in a given linked list
 
 Code 4: Merge two sorted linked lists
+
+Code 5: Given a linked list, rotate it k steps towards right
