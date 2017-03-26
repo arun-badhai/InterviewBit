@@ -14,6 +14,10 @@ Folder 1: Linked List
 
     Code 5: Given a linked list, rotate it k steps towards right
     
-Folder 2: Two Pointers
+Folder 2: Math
+
+    Code 1: FizzBuzz code (i.e for multiples of 3-->Fizz, for multiples of 5-->Buzz, for multiples of 3 and 5-->FizzBuzz)
+
+Folder 3: Two Pointers
 
     Code 1 : Maximum area of water that can be contained in the containers (using two pointers, one from the left, another from the right)
