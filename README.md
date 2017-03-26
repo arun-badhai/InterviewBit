@@ -13,3 +13,7 @@ Folder 1: Linked List
     Code 4: Merge two sorted linked lists
 
     Code 5: Given a linked list, rotate it k steps towards right
+    
+Folder 2: Two Pointers
+
+    Code 1 : Maximum area of water that can be contained in the containers (using two pointers, one from the left, another from the right)
