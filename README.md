@@ -8,6 +8,10 @@ Folder 1: Arrays
     
 Folder 2: Bit Manipulation
 
+    Code 1: Count number of 1 bits
+    
+    Code 2: Calculate the value of reversed bits
+
 Folder 3: Linked List
 
     Code 1: Add to numbers represented as linked lists
