@@ -14,6 +14,8 @@ Folder 2: Bit Manipulation
 
 Folder 3: Hashing
 
+    Code 1: Sum of two numbers, equals to a target value
+
 Folder 4: Linked List
 
     Code 1: Add to numbers represented as linked lists
