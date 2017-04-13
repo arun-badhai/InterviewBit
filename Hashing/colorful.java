@@ -1,4 +1,4 @@
-# Colorful number
+# Colorful number (Dynamic Programming)
 
 public class Solution {
 	public int colorful(int a) {
