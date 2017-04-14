@@ -17,7 +17,7 @@ public class Solution {
 	    }
 	    for(int i=0;i<a.size();i++){
 	        int v1 = a.get(i) - b;
-	        int v2 = b - a.get(i);
+	        int v2 = b + a.get(i);
 	        if(map.containsKey(v1)){
 	            if(v1 == a.get(i) && map.get(v1) > 1){
 	                return 1;
