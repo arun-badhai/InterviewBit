@@ -14,7 +14,11 @@ Folder 2: Bit Manipulation
 
 Folder 3: Hashing
 
-    Code 1: Sum of two numbers, equals to a target value
+    Code 1: Anagrams in a given list of strings
+    
+    Code 2: Find if a number is COLORFUL or not using dynamic programming
+    
+    Code 3: Sum of two numbers, equals to a target value
 
 Folder 4: Linked List
 
