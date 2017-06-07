@@ -16,7 +16,13 @@ Folder 3: Bit Manipulation
     
     Code 2: Calculate the value of reversed bits
 
-Folder 4: Hashing
+Folder 4 : Dynamic Programming
+
+    Code 1: Longest valid paranthesus
+    
+    Code 2: Regular expression matching
+
+Folder 5: Hashing
 
     Code 1: Anagrams in a given list of strings
     
@@ -24,7 +30,7 @@ Folder 4: Hashing
     
     Code 3: Sum of two numbers, equals to a target value
 
-Folder 5: Linked List
+Folder 6: Linked List
 
     Code 1: Add to numbers represented as linked lists
 
@@ -36,12 +42,12 @@ Folder 5: Linked List
 
     Code 5: Given a linked list, rotate it k steps towards right
     
-Folder 6: Math
+Folder 7: Math
 
     Code 1: FizzBuzz code (i.e for multiples of 3-->Fizz, for multiples of 5-->Buzz, for multiples of 3 and 5-->FizzBuzz)
 
-Folder 7: Two Pointers
+Folder 8: Two Pointers
 
     Code 1 : Maximum area of water that can be contained in the containers (using two pointers, one from the left, another from the right)
 
-Folder 8 : Dynamic Programming
+
