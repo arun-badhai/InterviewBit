@@ -43,3 +43,5 @@ Folder 6: Math
 Folder 7: Two Pointers
 
     Code 1 : Maximum area of water that can be contained in the containers (using two pointers, one from the left, another from the right)
+
+Folder 8 : Dynamic Programming
