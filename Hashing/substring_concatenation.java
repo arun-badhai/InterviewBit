@@ -1,60 +1,82 @@
-# Substring concatenation
+# Substring Concatenation
+
+//Method 1
+public class Solution {
+    ArrayList<Integer> list = new ArrayList<Integer>();
+    HashSet<String> set = new HashSet<>();
+	public ArrayList<Integer> findSubstring(String a, List<String> temp) {
+	    Permute(0, temp);
+	    int count = temp.size();
+	    int len = temp.get(0).length();
+	    int num = count*len;
+	    for(int i=0;i<=a.length()-num;i++){
+	        String s = a.substring(i,i+num);
+	        if(set.contains(s)){
+	            list.add(i);
+	        }
+	    }
+	    return list;
+	}
+	public void Permute(int start, List<String> temp){
+	    if(start==temp.size()){
+	        StringBuilder sb = new StringBuilder();
+	        for(int i=0;i<temp.size();i++){
+	            sb.append(temp.get(i));
+	        }
+	        set.add(sb.toString());
+	    }
+	    for(int i=start;i<temp.size();i++){
+	        Swap(i,start,temp);
+	        Permute(i+1, temp);
+	        Swap(i,start,temp);
+	    }
+	}
+	public void Swap(int x, int y, List<String> temp){
+	    String t = temp.get(x);
+	    temp.set(y, temp.get(x));
+	    temp.set(x, t);
+	}
+
+}
+
+// Method 2 : Using hashmaps when, list is final
 
 public class Solution {
+    ArrayList<Integer> list = new ArrayList<Integer>();
+    HashMap<String, Integer> map = new HashMap<>();
+    HashMap<String, Integer>ref;
+    int n;
 	public ArrayList<Integer> findSubstring(String a, final List<String> b) {
-	    int l1 = a.length();
-	    int l2 = b.get(0).length();
-	    int size = b.size();
-	    ArrayList<Integer> list = new ArrayList<>();
-	    if(l1 == 0 || l2 == 0 || size == 0){
-	        return list;
-	    }
-	    if(l1 < l2*size){
-	        return list;
-	    }
-	    HashMap<String, Integer> map = new HashMap<>();
-	    for(int k=0;k<size;k++){
-	    	if(map.containsKey(b.get(k))){
-	    		int v = map.get(b.get(k));
-	    		map.put(b.get(k), v+1);
-	    	}
-	    	else{
-	    		map.put(b.get(k), 1);	
-	    	}
-	    }
-	    HashMap<String, Integer> maptemp = new HashMap<>(map);
-	    int i=0;
-	    while(i <= l1-(l2*size)){
-	        int j=i;
-	        String temp = a.substring(j,j+l2);
-	        while(j <= l1-(l2*size) && map.containsKey(temp)){
-	        	//System.out.println(temp);
-	        	//System.out.println(temp+"  "+map.get(temp));
-	        	if(map.get(temp) == 0){
-	        		break;
-	        	}
-	        	int v = map.get(temp);
-	        	map.put(temp, v-1);
-				j = j+l2;
-				temp = a.substring(j, j+l2);
-	        }
-	        //System.out.println(map.keySet()+"   "+map.values());
-	        int t = 0;
-	        for(String key : map.keySet()){
-	        	if(map.get(key) == 0){
-	        		t++;
-	        	}
-	        }
-	        if(t == size){
-	        	list.add(i);
-	        	i = i+l2*size;
+	    for(int i=0;i<b.size();i++){
+	        if(!map.containsKey(b.get(i))){
+	            map.put(b.get(i), 1);
 	        }
 	        else{
-	        	i++;
+	            n = map.get(b.get(i));
+	            map.put(b.get(i), n+1);
 	        }
-	        map = maptemp;
-	        //System.out.println(maptemp.values());
-	        
+	    }
+	    int count = b.size();
+	    int len = b.get(0).length();
+	    int num = count*len;
+	    for(int i=0;i<=a.length()-num;i++){
+	        String s = a.substring(i,i+num);
+	        ref=(HashMap)map.clone();
+	        for(int j=0;j<s.length();j=j+len){
+	            String s1 = s.substring(j,j+len);
+	            if(ref.containsKey(s1)){
+	               n = ref.get(s1);
+	               if(n==1){
+	                   ref.remove(s1);
+	               }
+	               else{
+	                   ref.put(s1, n-1);
+	               }
+	            }
+	        }
+	        if(ref.size() == 0){
+	            list.add(i);
+	        }
 	    }
 	    return list;
 	}
