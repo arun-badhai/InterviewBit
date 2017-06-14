@@ -9,48 +9,43 @@
  * }
  */
 public class Solution {
-
-	// Reverses the given list
-    public ListNode reverseList(ListNode l2){
-        ListNode prev = null;
-        ListNode curr = l2;
-        ListNode next;
-        while(curr != null){
-            next = curr.next;
-            curr.next = prev;
-            prev = curr;
-            curr = next;
+    public ListNode reverse(ListNode temp){
+        if(temp == null || temp.next == null){
+            return temp;
         }
-        l2 = prev;
-        return l2;
+        ListNode prev = null;
+	    ListNode curr = temp;
+	    ListNode next;
+	    while(curr != null){
+	        next = curr.next;
+	        curr.next = prev;
+	        prev = curr;
+	        curr = next;
+	    }
+	    return prev;
     }
     public int lPalin(ListNode A) {
-        if(A == null || A.next == null){
+        if(A == null){
             return 1;
         }
-		// Split in two lists
-        ListNode tort = A;
-        ListNode hare = A.next;
-        while(hare != null || hare.next != null){
-            tort = tort.next;
-            hare = hare.next.next;
+        if(A.next == null){
+            return 1;
         }
-        ListNode l1 = A;
-        ListNode l2 = tort.next;
-        tort.next = null;
-		
-		// Reverse the second list
-        l2 = reverseList(l2);
-		
-		// Compare elements in the two lists
-        while(l1 != null || l2 != null){
-            if(l2 != null){
-                if(l1.val != l2.val){
-                    return 0;
-                }
-                l2 = l2.next;
+        ListNode prev = A;
+        ListNode curr = prev.next;
+        while(curr != null && curr.next != null){
+            prev = prev.next;
+            curr = curr.next.next;
+        }
+        ListNode start = A;
+        ListNode mid = reverse(prev.next);
+        prev.next = null;
+        while(start != null && mid != null){
+            if(start.val != mid.val){
+                return 0;
             }
-            l1 = l1.next;
+            start = start.next;
+            mid = mid.next;
         }
         return 1;
     }
