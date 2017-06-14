@@ -26,36 +26,32 @@ public class Solution {
 	    return prev;
     }
 	public ListNode reorderList(ListNode a) {
-	    if(a == null){
-	        return null;
-	    }
-	    if(a.next == null){
+	    ListNode prev = a;
+	    ListNode curr = a;
+	    if(a == null || a.next == null){
 	        return a;
 	    }
-	    ListNode tort = a;
-	    ListNode hare = tort.next;
-	    while(hare != null || hare.next != null){
-	        tort = tort.next;
-	        hare = hare.next.next;
+	    while(curr != null && curr.next != null){
+	        prev = prev.next;
+	        curr = curr.next.next;
 	    }
-	    ListNode list1 = a;
-	    ListNode list2 = tort.next;
-	    tort.next = null;
-	    list2 = reverse(list2); 
-	    ListNode val = new ListNode(0);
-	    ListNode temp = val;
-	    while(list1 != null || list2 != null){
-	        if(list1 != null){
-	            temp.next = list1;
-	            temp = temp.next;
-	            list1 = list1.next;
+	    ListNode start = a;
+	    ListNode mid = reverse(prev.next);
+	    prev.next = null;
+	    ListNode first = new ListNode(0);
+	    ListNode value = first;
+	    while(start != null || mid != null){
+	        if(start != null){
+	            first.next = start;
+	            first = first.next;
+	            start = start.next;
 	        }
-	        if(list2 != null){
-	            temp.next = list2;
-	            temp = temp.next;
-	            list2 = list2.next;
+	        if(mid != null){
+	            first.next = mid;
+	            first = first.next;
+	            mid = mid.next;
 	        }
 	    }
-	    return val.next;
+	    return value.next;
 	}
 }
