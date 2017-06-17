@@ -1,0 +1,37 @@
+# Zigzag level order tree traversal
+
+/**
+ * Definition for binary tree
+ * class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+public class Solution {
+    ArrayList<ArrayList<Integer>> list = new ArrayList<>();
+	public ArrayList<ArrayList<Integer>> zigzagLevelOrder(TreeNode a) {
+	    Add(a, 0);
+	    return list;
+	}
+    public void Add(TreeNode a, int level){
+        if(a != null){
+            ArrayList<Integer> temp;
+            if(list.size() <= level){
+                temp = new ArrayList<>();
+                list.add(temp);
+            }
+            temp = list.get(level);
+            if(level%2 == 0){
+                temp.add(a.val);
+            }
+            else{
+                temp.add(0,a.val);
+            }
+            level++;
+            Add(a.left, level);
+            Add(a.right, level);
+        }
+    }
+}
