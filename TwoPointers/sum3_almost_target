@@ -1,0 +1,31 @@
+# Sum of 3 numbers that are almost equal to the target
+
+public class Solution {
+	public int threeSumClosest(ArrayList<Integer> a, int b) {
+	    int ans = 0;
+	    int min = Integer.MAX_VALUE;
+	    Collections.sort(a);
+	    for(int i=0;i<a.size();i++){
+	        int j = i+1;
+	        int k = a.size()-1;
+	        while(j<k){
+	            int sum = a.get(i)+a.get(j)+a.get(k);
+	            if(sum == b){
+	                return sum;
+	            }
+	            int val = Math.abs(b-sum);
+	            if(val<min){
+	                min = val;
+	                ans = sum;
+	            }
+	            if(sum<b){
+	                j++;
+	            }
+	            else{
+	                k--;
+	            }
+	        }
+	    }
+	    return ans;
+	}
+}
