@@ -30,7 +30,9 @@ Folder 5: Hashing
     
     Code 3: Sum of two numbers, equals to a target value
 
-Folder 6: Linked List
+Folder 6: Heaps and Maps
+
+Folder 7: Linked List
 
     Code 1: Add to numbers represented as linked lists
 
@@ -42,11 +44,11 @@ Folder 6: Linked List
 
     Code 5: Given a linked list, rotate it k steps towards right
     
-Folder 7: Math
+Folder 8: Math
 
     Code 1: FizzBuzz code (i.e for multiples of 3-->Fizz, for multiples of 5-->Buzz, for multiples of 3 and 5-->FizzBuzz)
 
-Folder 8: Two Pointers
+Folder 9: Two Pointers
 
     Code 1 : Maximum area of water that can be contained in the containers (using two pointers, one from the left, another from the right)
 
