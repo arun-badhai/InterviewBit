@@ -1,0 +1,33 @@
+# A number is missing and another number is repeated between 1 to n
+
+public class Solution {
+	// DO NOT MODIFY THE LIST
+	HashSet<Integer> set = new HashSet<>();
+	int rep;
+	public ArrayList<Integer> repeatedNumber(final List<Integer> a) {
+	    ArrayList<Integer> list = new ArrayList<>();
+	    int miss;
+	    for(int i=0;i<a.size();i++){
+	        if(!set.contains(a.get(i))){
+	            set.add(a.get(i));
+	        }
+	        else{
+	            rep = a.get(i);
+	            break;
+	        }
+	    }
+	    int sum=0;
+	    for(int i=1;i<=a.size();i++){
+	        sum = sum+i;
+	    }
+	    int sum1=0;
+	    for(int i=0;i<a.size();i++){
+	        sum1 = sum1+a.get(i);
+	    }
+	    sum1=sum1-rep;
+	    miss = sum-sum1;
+	    list.add(rep);
+	    list.add(miss);
+	    return list;
+	}
+}
