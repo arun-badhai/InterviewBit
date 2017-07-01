@@ -56,6 +56,12 @@ Folder 10: Strings
 
 Folder 11: Trees
 
+    Code 1: Perform tree traversal in zigzag manner
+    
+    Code 2: Perform tree traversal in preOrder
+    
+    Code 3: Perform tree traversal in postOrder
+
 Folder 12: Two Pointers
 
     Code 1 : Maximum area of water that can be contained in the containers (using two pointers, one from the left, another from the right)
