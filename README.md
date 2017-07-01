@@ -50,6 +50,8 @@ Folder 8: Math
 
 Folder 9: Stacks and Queues
 
+    Code 1: Finding the maximum elements in a sliding window
+
 Folder 10: Strings
 
 Folder 11: Trees
