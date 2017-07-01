@@ -54,6 +54,8 @@ Folder 9: Stacks and Queues
 
 Folder 10: Strings
 
+    Code 1: Implement StrStr
+
 Folder 11: Trees
 
     Code 1: Perform tree traversal in zigzag manner
