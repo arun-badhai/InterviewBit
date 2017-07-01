@@ -48,7 +48,13 @@ Folder 8: Math
 
     Code 1: FizzBuzz code (i.e for multiples of 3-->Fizz, for multiples of 5-->Buzz, for multiples of 3 and 5-->FizzBuzz)
 
-Folder 9: Two Pointers
+Folder 9: Stacks and Queues
+
+Folder 10: Strings
+
+Folder 11: Trees
+
+Folder 12: Two Pointers
 
     Code 1 : Maximum area of water that can be contained in the containers (using two pointers, one from the left, another from the right)
 
