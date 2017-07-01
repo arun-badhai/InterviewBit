@@ -32,6 +32,10 @@ Folder 5: Hashing
 
 Folder 6: Heaps and Maps
 
+    Code 1: Implement LRU cache
+    
+    Code 2: Find distinct elements in a window
+
 Folder 7: Linked List
 
     Code 1: Add to numbers represented as linked lists
